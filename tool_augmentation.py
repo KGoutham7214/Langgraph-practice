@@ -1,7 +1,11 @@
 from langchain_openai import ChatOpenAI
 from langchain_core.tools import tool
 from dotenv import load_dotenv
+import os
+import certifi
+
 load_dotenv()
+os.environ["SSL_CERT_FILE"] = certifi.where()
 
 
 

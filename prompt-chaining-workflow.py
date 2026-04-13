@@ -16,7 +16,11 @@ from langchain_openai import ChatOpenAI
 from langgraph.graph import StateGraph, START, END
 from typing import TypedDict
 from dotenv import load_dotenv
+import os
+import certifi
+
 load_dotenv()
+os.environ["SSL_CERT_FILE"] = certifi.where()
 
 class ContentState(TypedDict):
     topic: str

@@ -4,7 +4,11 @@ from pydantic import BaseModel, Field
 from typing import List
 import json
 from dotenv import load_dotenv
+import os
+import certifi
+
 load_dotenv()
+os.environ["SSL_CERT_FILE"] = certifi.where()
 
 class ProductReview(BaseModel):
     """A structured representation of a product review."""

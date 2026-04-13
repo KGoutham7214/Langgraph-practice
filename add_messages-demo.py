@@ -5,7 +5,11 @@ from langchain_core.messages import BaseMessage, HumanMessage, AIMessage
 from langchain_openai import ChatOpenAI
 
 from dotenv import load_dotenv
+import os
+import certifi
+
 load_dotenv()
+os.environ["SSL_CERT_FILE"] = certifi.where()
 
 llm = ChatOpenAI(model="gpt-5.4-mini")
 
