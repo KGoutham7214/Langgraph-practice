@@ -184,5 +184,5 @@ initial_state = {
 final_state = graph.invoke(initial_state)
 print("\n"+"="*70)
 print("FINAL SYNTHESIZED REPORT:")
-print(final_state['final_report'])
+print(final_state['final_report']) 
 
